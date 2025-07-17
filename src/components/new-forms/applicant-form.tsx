@@ -84,10 +84,10 @@ export function ApplicantForm({ data, onNext, onBack }: ApplicantFormProps) {
             value={formData.gender}
             onValueChange={(value: string) => handleChange("gender", value)}
           >
-            <SelectTrigger className="mt-1">
+            <SelectTrigger className="mt-1 bg-white">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="bg-white ">
               <SelectItem value="Male">Male</SelectItem>
               <SelectItem value="Female">Female</SelectItem>
               <SelectItem value="Other">Other</SelectItem>
@@ -116,7 +116,7 @@ export function ApplicantForm({ data, onNext, onBack }: ApplicantFormProps) {
             <SelectTrigger className="mt-1">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="bg-white">
               <SelectItem value="Single">Single</SelectItem>
               <SelectItem value="Married">Married</SelectItem>
               <SelectItem value="Divorced">Divorced</SelectItem>
@@ -177,7 +177,7 @@ export function ApplicantForm({ data, onNext, onBack }: ApplicantFormProps) {
             <SelectTrigger className="mt-1">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="bg-white">
               <SelectItem value="Poland">Poland</SelectItem>
               <SelectItem value="Pakistan">Pakistan</SelectItem>
               <SelectItem value="UK">United Kingdom</SelectItem>

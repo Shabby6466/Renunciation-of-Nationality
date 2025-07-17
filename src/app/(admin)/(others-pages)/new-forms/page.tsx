@@ -12,7 +12,8 @@ import React from "react";
 // };
 export default function page() {
   return (
-    <div>
+    // max-w-8xl mx-auto p-8 bg-white shadow-md rounded-3xl w-full
+    <div className="bg bg-cover bg-center min-h-screen">
       <FormHeader />
       {/* <PageBreadcrumb pageTitle="Applicant Particulars" /> */}
       <NewForm />

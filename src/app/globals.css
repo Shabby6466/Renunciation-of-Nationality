@@ -785,3 +785,7 @@ label {
   font-family: AzoSansTest Medium;
   font-size: 1rem;
 }
+
+.bg {
+  background-image: url("/Images/bg/landing_page 2.svg");
+}
