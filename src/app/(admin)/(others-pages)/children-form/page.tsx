@@ -1,15 +1,15 @@
 "use client";
 import React from "react";
-import ParentForm from "@/components/new-forms/parent-form"; // adjust if path differs
 import { useRouter } from "next/navigation";
 import FormLayout from "@/components/new-forms/FormLayout";
+import { ChildrenForm } from "@/components/new-forms/children-form";
 
 export default function ParentFormPage() {
   const router = useRouter();
 
   const handleNext = (data: any) => {
     // console.log("ParentForm submitted:", data);
-    router.push("/children-form");
+    router.push("/form/children-form");
   };
 
   const handleBack = () => {
@@ -19,7 +19,7 @@ export default function ParentFormPage() {
   return (
     <div>
       <FormLayout>
-        <ParentForm data={{}} onNext={handleNext} onBack={handleBack} />
+        <ChildrenForm data={{}} onNext={handleNext} onBack={handleBack} />
       </FormLayout>
     </div>
   );

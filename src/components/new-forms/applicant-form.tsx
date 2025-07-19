@@ -177,7 +177,7 @@ export function ApplicantForm({ data, onNext, onBack }: ApplicantFormProps) {
             <SelectTrigger className="mt-1">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent className="bg-white">
+            <SelectContent className="bg-white border-r">
               <SelectItem value="Poland">Poland</SelectItem>
               <SelectItem value="Pakistan">Pakistan</SelectItem>
               <SelectItem value="UK">United Kingdom</SelectItem>

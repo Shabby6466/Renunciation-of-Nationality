@@ -1,6 +1,6 @@
-"use client"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Sidebar,
   SidebarContent,
@@ -10,32 +10,43 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarMenuBadge,
-} from "@/components/ui/sidebar"
-import { LayoutDashboard, Bell, FileText, Plus, ChevronDown } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+} from "@/components/ui/sidebar";
+import {
+  LayoutDashboard,
+  Bell,
+  FileText,
+  Plus,
+  ChevronDown,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const menuItems = [
   {
     title: "Dashboard",
-    url: "/dashboard",
+    url: "/",
     icon: LayoutDashboard,
   },
   {
     title: "Notifications",
-    url: "/dashboard/notifications",
+    url: "/notifications",
     icon: Bell,
     badge: "10",
   },
   {
     title: "Recent Forms",
-    url: "/dashboard/forms",
+    url: "/recent-forms",
     icon: FileText,
   },
-]
+];
 
 export function AppSidebar() {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   return (
     <Sidebar className="border-r">
@@ -47,7 +58,9 @@ export function AppSidebar() {
                 <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center">
                   <div className="text-white text-sm font-bold">FA</div>
                 </div>
-                <span className="ml-3 font-medium text-gray-900">Faraz Asad</span>
+                <span className="ml-3 font-medium text-gray-900">
+                  Faraz Asad
+                </span>
                 <ChevronDown className="ml-auto h-4 w-4 text-gray-500" />
               </div>
             </Button>
@@ -64,12 +77,18 @@ export function AppSidebar() {
         <SidebarMenu className="space-y-2">
           {menuItems.map((item) => (
             <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton asChild isActive={pathname === item.url} className="h-11 px-3">
+              <SidebarMenuButton
+                asChild
+                isActive={pathname === item.url}
+                className="h-11 px-3"
+              >
                 <Link href={item.url} className="flex items-center">
                   <item.icon className="h-5 w-5" />
                   <span className="ml-3">{item.title}</span>
                   {item.badge && (
-                    <SidebarMenuBadge className="ml-auto bg-gray-900 text-white">{item.badge}</SidebarMenuBadge>
+                    <SidebarMenuBadge className="ml-auto bg-gray-900 text-white">
+                      {item.badge}
+                    </SidebarMenuBadge>
                   )}
                 </Link>
               </SidebarMenuButton>
@@ -79,9 +98,12 @@ export function AppSidebar() {
       </SidebarContent>
 
       <SidebarFooter className="p-4 border-t">
-        <Button className="w-full bg-indigo-600 hover:bg-indigo-700 h-11" asChild>
-          <Link href="/dashboard/forms/new">
-            <Plus className="h-4 w-4 mr-2" />
+        <Button
+          className="w-full bg-indigo-600 hover:bg-indigo-700 h-11"
+          asChild
+        >
+          <Link href="form/new-forms">
+            <Plus className="h-5 w-5 mr-2 mt-5" />
             New Form
           </Link>
         </Button>
@@ -98,5 +120,5 @@ export function AppSidebar() {
         </div>
       </SidebarFooter>
     </Sidebar>
-  )
+  );
 }

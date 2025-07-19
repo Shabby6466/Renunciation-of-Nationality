@@ -1,8 +1,6 @@
-// import CategoriesManagement from "@/components/recent-forms/recent-forms";
-import PageBreadcrumb from "@/components/common/PageBreadCrumb";
 import { Metadata } from "next";
 import NewForm from "@/components/new-forms/new-form";
-import { FormHeader } from "@/components/new-forms/form-header";
+import FormLayout from "@/components/new-forms/FormLayout";
 
 import React from "react";
 
@@ -13,10 +11,11 @@ import React from "react";
 export default function page() {
   return (
     // max-w-8xl mx-auto p-8 bg-white shadow-md rounded-3xl w-full
-    <div className="bg bg-cover bg-center min-h-screen">
-      <FormHeader />
+    <div>
       {/* <PageBreadcrumb pageTitle="Applicant Particulars" /> */}
-      <NewForm />
+      <FormLayout>
+        <NewForm />
+      </FormLayout>
     </div>
   );
 }

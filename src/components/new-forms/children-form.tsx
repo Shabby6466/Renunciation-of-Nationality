@@ -67,7 +67,7 @@ export function ChildrenForm({ data, onNext, onBack }: ChildrenFormProps) {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="max-w-4xl mx-auto p-8 bg-white shadow-md rounded-3xl w-full flex flex-col space-y-6">
       <div className="flex items-center justify-between">
         <h2 className="text-xl font-semibold">Children Particulars</h2>
         <Button
@@ -80,7 +80,7 @@ export function ChildrenForm({ data, onNext, onBack }: ChildrenFormProps) {
       </div>
 
       {children.map((child, index) => (
-        <div key={index} className="bg-white border rounded-lg p-6">
+        <div key={index} className=" px-2 py-6">
           <div className="flex items-start justify-between mb-6">
             <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -148,7 +148,7 @@ export function ChildrenForm({ data, onNext, onBack }: ChildrenFormProps) {
                   <SelectTrigger className="mt-1">
                     <SelectValue />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="bg-white">
                     <SelectItem value="Male">Male</SelectItem>
                     <SelectItem value="Female">Female</SelectItem>
                   </SelectContent>
@@ -227,12 +227,13 @@ export function ChildrenForm({ data, onNext, onBack }: ChildrenFormProps) {
       </div>
 
       <div className="flex justify-between pt-6">
-        <Button type="button" className="border" onClick={onBack}>
+        <Button type="button" className="border rounded-3xl" onClick={onBack}>
           Go Back
         </Button>
+
         <Button
           type="button"
-          className="bg-indigo-600 hover:bg-indigo-700"
+          className="bg-[#525EB1] hover:bg-indigo-700 text-white rounded-3xl"
           onClick={handleSubmit}
         >
           Next

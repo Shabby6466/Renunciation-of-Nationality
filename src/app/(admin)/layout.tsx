@@ -15,7 +15,13 @@ export default function AdminLayout({
   const pathname = usePathname();
 
   // Hide sidebar for New Form route
-  const routesToHideSidebar = ["/new-forms", "/parent-form"];
+  const routesToHideSidebar = [
+    "/new-forms",
+    "/parent-form",
+    "/children-form",
+    "/documents-form",
+    "/review-form",
+  ];
   const hideSidebar = routesToHideSidebar.some((path) =>
     pathname?.startsWith(path),
   );

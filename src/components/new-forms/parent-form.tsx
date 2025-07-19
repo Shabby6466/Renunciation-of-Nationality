@@ -1,7 +1,6 @@
 "use client";
 
 import type React from "react";
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -47,9 +46,9 @@ export default function ParentForm({ data, onNext, onBack }: ParentFormProps) {
   };
 
   return (
-    <div className="space-y-8">
+    <div className="max-w-4xl mx-auto p-2 w-full space-y-4">
       {/* Parents Particulars */}
-      <div className="bg-white rounded-lg p-6 border">
+      <div className="bg-white rounded-3xl shadow-md p-6 border">
         <h3 className="text-lg font-semibold mb-4">Parents Particulars</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -99,7 +98,7 @@ export default function ParentForm({ data, onNext, onBack }: ParentFormProps) {
       </div>
 
       {/* Other Details */}
-      <div className="bg-white rounded-lg p-6 border">
+      <div className="bg-white rounded-3xl shadow-md p-6 border">
         <h3 className="text-lg font-semibold mb-4">Other Details</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -147,7 +146,7 @@ export default function ParentForm({ data, onNext, onBack }: ParentFormProps) {
               <SelectTrigger className="mt-1">
                 <SelectValue />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="bg-white ">
                 <SelectItem value="Pakistan">Pakistan</SelectItem>
                 <SelectItem value="Poland">Poland</SelectItem>
                 <SelectItem value="UK">United Kingdom</SelectItem>
@@ -190,19 +189,18 @@ export default function ParentForm({ data, onNext, onBack }: ParentFormProps) {
             />
           </div>
         </div>
-      </div>
-
-      <div className="flex justify-between pt-6">
-        <Button type="button" variant="outline" onClick={onBack}>
-          Go Back
-        </Button>
-        <Button
-          type="button"
-          className="bg-indigo-600 hover:bg-indigo-700"
-          onClick={() => onNext(formData)}
-        >
-          Next
-        </Button>
+        <div className="flex justify-between pt-6">
+          <Button type="button" className="border rounded-3xl" onClick={onBack}>
+            Cancel
+          </Button>
+          <Button
+            type="button"
+            className="bg-[#525EB1] hover:bg-indigo-700 text-white rounded-3xl"
+            onClick={() => onNext(formData)}
+          >
+            Next
+          </Button>
+        </div>
       </div>
     </div>
   );
