@@ -6,12 +6,17 @@ import { Upload, Trash2 } from "lucide-react";
 import { ArrowRightIcon } from "@/icons";
 
 interface DocumentsFormProps {
-  data: any;
-  onNext: (data: any) => void;
+  data: { uploads?: Record<number, string> };
+  onNext: (data: { uploads: Record<number, string> }) => void;
   onBack: () => void;
 }
 
-const documentRequirements = [
+interface DocumentRequirement {
+  id: number;
+  title: string;
+}
+
+const documentRequirements: DocumentRequirement[] = [
   {
     id: 1,
     title:
@@ -44,10 +49,11 @@ const documentRequirements = [
 ];
 
 export function DocumentsForm({ data, onNext, onBack }: DocumentsFormProps) {
-  const [uploads, setUploads] = useState(data.uploads || {});
+  const [uploads, setUploads] = useState<Record<number, string>>(
+    data.uploads || {},
+  );
 
   const handleUpload = (docId: number) => {
-    // Simulate file upload
     setUploads((prev) => ({
       ...prev,
       [docId]: `document_${docId}.pdf`,
@@ -67,7 +73,7 @@ export function DocumentsForm({ data, onNext, onBack }: DocumentsFormProps) {
   };
 
   return (
-    <div className="w-[840px] h-[1124px] mx-auto bg-white shadow-md rounded-2xl  flex flex-col ">
+    <div className="w-[840px] h-[1124px] mx-auto bg-white shadow-md rounded-2xl flex flex-col">
       <div className="border-b pb-8">
         <div className="relative pt-6 pb-4 pr-4 mb-12 mt-4">
           <h2 className="text-2xl font-semibold text-center absolute left-1/2 transform -translate-x-1/2">
@@ -75,10 +81,10 @@ export function DocumentsForm({ data, onNext, onBack }: DocumentsFormProps) {
           </h2>
         </div>
 
-        <div className="space-y-8 ">
+        <div className="space-y-8">
           {documentRequirements.map((doc) => (
-            <div key={doc.id} className=" border-b mx-12 pb-4 ">
-              <div className="flex flex-col  justify-between gap-4">
+            <div key={doc.id} className="border-b mx-12 pb-4">
+              <div className="flex flex-col justify-between gap-4">
                 <div className="flex-1 pr-4">
                   <p className="text-sm text-gray-700">
                     <span className="font-medium">{doc.id}.</span> {doc.title}
@@ -90,10 +96,9 @@ export function DocumentsForm({ data, onNext, onBack }: DocumentsFormProps) {
                   {uploads[doc.id] ? (
                     <>
                       <span className="text-sm text-green-600">Uploaded</span>
-
                       <Button
                         onClick={() => handleRemove(doc.id)}
-                        className="rounded-full bg-[#D5393C] text-white hover:bg-[#A82C2E] h-[32px] w-[32px]  px-3 py-1 text-sm"
+                        className="rounded-full bg-[#D5393C] text-white hover:bg-[#A82C2E] h-[32px] w-[32px] px-3 py-1 text-sm"
                       >
                         <Trash2 className="h-3 w-3" />
                       </Button>
@@ -114,8 +119,7 @@ export function DocumentsForm({ data, onNext, onBack }: DocumentsFormProps) {
         </div>
       </div>
 
-      <div className="flex justify-between mt-4 mx-4 ">
-        {/* <FormProgress /> */}
+      <div className="flex justify-between mt-4 mx-4">
         <div></div>
         <div className="flex space-x-2">
           <Button
