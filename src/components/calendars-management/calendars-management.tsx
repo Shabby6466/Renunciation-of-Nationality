@@ -80,7 +80,6 @@ const CalendarsManagement: React.FC = () => {
                 {calendarColumns.map((col) => (
                   <TableCell
                     key={col.id}
-                    isHeader
                     className={`py-3 px-3 font-medium text-[#201D1D99] text-start text-base dark:text-white ${col.className} last:text-right first:pl-6 last:pr-6`}
                   >
                     {col.header}

@@ -358,7 +358,6 @@ const EventsManagement: React.FC = () => {
                 {calendarColumns.map((col, index) => (
                   <TableCell
                     key={col.id}
-                    isHeader
                     className={`py-3 px-3 font-medium text-[#201D1D99] text-start text-base dark:text-white whitespace-nowrap last:text-right ${
                       index === 0 ? "pl-6" : ""
                     } ${index === calendarColumns.length - 1 ? "pr-6" : ""}`}

@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/select";
 import { Plus, Upload, Trash2 } from "lucide-react";
 import Image from "next/image";
-import FormProgress from "./form-progress";
 import { ArrowRightIcon } from "@/icons";
 
 interface ChildrenFormProps {
