@@ -1,19 +1,23 @@
 interface FormProgressProps {
-  currentStep: number
-  totalSteps: number
-  formId: string
+  currentStep: number;
+  totalSteps: number;
+  formId: string;
 }
 
-export function FormProgress({ currentStep, totalSteps, formId }: FormProgressProps) {
+export default function FormProgress({
+  currentStep,
+  totalSteps,
+  formId,
+}: FormProgressProps) {
   return (
     <div className="flex items-center justify-between">
       <div className="text-sm text-gray-600">form id: {formId}</div>
 
       <div className="flex items-center space-x-4">
         {Array.from({ length: totalSteps }, (_, i) => {
-          const stepNumber = i + 1
-          const isCompleted = stepNumber < currentStep
-          const isCurrent = stepNumber === currentStep
+          const stepNumber = i + 1;
+          const isCompleted = stepNumber < currentStep;
+          const isCurrent = stepNumber === currentStep;
 
           return (
             <div key={stepNumber} className="flex items-center">
@@ -32,12 +36,14 @@ export function FormProgress({ currentStep, totalSteps, formId }: FormProgressPr
                 <span className="ml-2 text-sm">Step {stepNumber}</span>
               </div>
               {stepNumber < totalSteps && (
-                <div className={`w-8 h-0.5 mx-2 ${isCompleted ? "bg-indigo-600" : "bg-gray-200"}`} />
+                <div
+                  className={`w-8 h-0.5 mx-2 ${isCompleted ? "bg-indigo-600" : "bg-gray-200"}`}
+                />
               )}
             </div>
-          )
+          );
         })}
       </div>
     </div>
-  )
+  );
 }

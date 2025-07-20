@@ -2,14 +2,14 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import FormLayout from "@/components/new-forms/FormLayout";
-import { ChildrenForm } from "@/components/new-forms/children-form";
+import { DocumentsForm } from "@/components/new-forms/documents-form";
 
 export default function ParentFormPage() {
   const router = useRouter();
 
   const handleNext = (data: any) => {
     // console.log("ParentForm submitted:", data);
-    router.push("/supporting-documents");
+    router.push("/form/children-form");
   };
 
   const handleBack = () => {
@@ -19,7 +19,7 @@ export default function ParentFormPage() {
   return (
     <div>
       <FormLayout>
-        <ChildrenForm data={{}} onNext={handleNext} onBack={handleBack} />
+        <DocumentsForm data={{}} onNext={handleNext} onBack={handleBack} />
       </FormLayout>
     </div>
   );

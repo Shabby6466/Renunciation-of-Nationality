@@ -66,7 +66,7 @@ export function DocumentsForm({ data, onNext, onBack }: DocumentsFormProps) {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="w-[840px] h-[1144px] mx-auto p-2 bg-white shadow-md rounded-2xl  flex flex-col ">
       <h2 className="text-xl font-semibold">Supporting Documents</h2>
 
       <div className="space-y-6">
@@ -83,17 +83,18 @@ export function DocumentsForm({ data, onNext, onBack }: DocumentsFormProps) {
                 {uploads[doc.id] ? (
                   <>
                     <span className="text-sm text-green-600">Uploaded</span>
+
                     <Button
                       onClick={() => handleRemove(doc.id)}
-                      className="text-red-600 hover:bg-red-50 px-2 py-1 text-sm"
+                      className="rounded-full bg-[#D5393C] text-white hover:bg-[#A82C2E] h-[32px] w-[32px]  px-3 py-1 text-sm"
                     >
-                      <Trash2 className="h-4 w-4" />
+                      <Trash2 className="h-3 w-3" />
                     </Button>
                   </>
                 ) : (
                   <Button
                     onClick={() => handleUpload(doc.id)}
-                    className="bg-indigo-600 hover:bg-indigo-700 px-2 py-1 text-sm"
+                    className="bg-[#525EB1] hover:bg-[#414c99] h-[32px] text-white rounded-3xl"
                   >
                     <Upload className="h-4 w-4 mr-2" />
                     Upload
@@ -111,7 +112,7 @@ export function DocumentsForm({ data, onNext, onBack }: DocumentsFormProps) {
         </Button>
         <Button
           type="button"
-          className="bg-indigo-600 hover:bg-indigo-700"
+          className="bg-[#525EB1] hover:bg-[#414c99] h-[32px] text-white rounded-3xl"
           onClick={handleSubmit}
         >
           Review Application

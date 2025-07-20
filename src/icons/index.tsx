@@ -14,7 +14,7 @@ import AudioIcon from "./audio.svg";
 import GridIcon from "./grid.svg";
 import FileIcon from "./file.svg";
 import DownloadIcon from "./download.svg";
-import ArrowRightIcon from "./arrow-right.svg";
+// import ArrowRightIcon from "./arrow-right.svg";
 import GroupIcon from "./group.svg";
 import BoxIconLine from "./box-line.svg";
 import ShootingStarIcon from "./shooting-star.svg";
@@ -92,6 +92,7 @@ import DashboardIcon from "./dashboard-icon.svg";
 import SortIcon from "./sort-icon.svg";
 import ExportIcon from "./export-icon.svg";
 import PlusIcon from "./plus-icon.svg";
+import ArrowRightIcon from "./right-arrow-icon.svg";
 
 export {
   SortIcon,

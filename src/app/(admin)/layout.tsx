@@ -19,7 +19,7 @@ export default function AdminLayout({
     "/new-forms",
     "/parent-form",
     "/children-form",
-    "/documents-form",
+    "/supporting-documents",
     "/review-form",
   ];
   const hideSidebar = routesToHideSidebar.some((path) =>
