@@ -33,7 +33,6 @@ const InventoryList: React.FC = () => {
               {inventoryColumns.map((col) => (
                 <TableCell
                   key={col.id}
-                  isHeader
                   className={`py-3 px-3 font-medium text-[#201D1D99] text-start text-base dark:text-white ${col.className}`}
                 >
                   {col.header}

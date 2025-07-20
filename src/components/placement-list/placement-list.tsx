@@ -25,9 +25,6 @@ const PlacementList: React.FC = () => {
     <>
       <PageBreadcrumb
         pageTitle="Placement List"
-        counter={true}
-        counterText="Total Placement"
-        counterValue={placements?.length}
       />
       <div className="overflow-hidden rounded-2xl bg-white dark:bg-white/[0.03] min-h-[calc(100vh-200px)] pb-[1.5rem]">
         <div className="max-w-full overflow-x-auto">
@@ -38,7 +35,6 @@ const PlacementList: React.FC = () => {
                 {placementColumns.map((col) => (
                   <TableCell
                     key={col?.id}
-                    isHeader
                     className={`py-3 px-3 font-medium text-[#201D1D99] text-start text-base dark:text-white ${col.className}`}
                   >
                     {col.header}

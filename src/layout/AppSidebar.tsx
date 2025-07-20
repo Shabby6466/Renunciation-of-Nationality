@@ -49,7 +49,6 @@ const AppSidebar: React.FC = () => {
     isMobileOpen,
     isHovered,
     setIsHovered,
-    setIsExpanded,
     setIsMobileOpen,
   } = useSidebar();
 
@@ -68,7 +67,6 @@ const AppSidebar: React.FC = () => {
 
   const handleNewFormClick = () => {
     // First, collapse the sidebar
-    if (setIsExpanded) setIsExpanded(false);
     if (setIsMobileOpen) setIsMobileOpen(false);
     // Then, navigate to the page
     router.push("/new-forms");

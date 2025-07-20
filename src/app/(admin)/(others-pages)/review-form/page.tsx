@@ -19,7 +19,7 @@ export default function ParentFormPage() {
   return (
     <div>
       <FormLayout>
-        <ReviewForm data={{}} onNext={handleNext} onBack={handleBack} />
+        <ReviewForm data={{}} onSubmit={handleNext} onBack={handleBack} isLastStep={true} />
       </FormLayout>
     </div>
   );
