@@ -21,8 +21,19 @@ interface ChildrenFormProps {
   onBack: () => void;
 }
 
+interface ChildData {
+  fullName: string;
+  nationality: string;
+  cnic: string;
+  placeOfBirth: string;
+  dateOfBirth: string;
+  gender: string;
+  applicantRelation: string;
+  photo?: string | null;
+}
+
 export function ChildrenForm({ data, onNext, onBack }: ChildrenFormProps) {
-  const [children, setChildren] = useState(
+  const [children, setChildren] = useState<ChildData[]>(
     data.children || [
       {
         fullName: "Faraz Asad",
@@ -84,7 +95,7 @@ export function ChildrenForm({ data, onNext, onBack }: ChildrenFormProps) {
         </div>
       </div>
 
-      {children.map((child, index) => (
+      {children.map((child: ChildData, index: number) => (
         <div key={index} className=" px-2 py-2">
           <div className="flex items-start justify-between mb-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-2 w-full">
