@@ -24,12 +24,12 @@
 }
 
 body {
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "Inter", sans-serif !important;
 }
 
 @theme {
   --font-*: initial;
-  --font-outfit: "DM Sans", sans-serif !important;
+  --font-outfit: "Inter", sans-serif !important;
 
   --breakpoint-*: initial;
   --breakpoint-2xsm: 375px;
@@ -782,8 +782,9 @@ span.flatpickr-weekday,
 }
 
 label {
-  font-family: "DM Sans";
-  font-size: 1rem;
+  font-family: "Inter";
+  /* font-size: 1rem; */
+  font-weight: 300;
 }
 
 .bg {

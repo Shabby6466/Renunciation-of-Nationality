@@ -137,7 +137,7 @@ const AppSidebar: React.FC = () => {
             // Use a button for the "New Forms" item
             <button
               onClick={handleNewFormClick}
-              className="w-full flex items-center gap-3 px-4 py-2 bg-[#525EB1] text-white rounded-full transition-colors"
+              className="w-[232px] h-[40px] flex items-center gap-2 px-4 py-2 bg-[#525EB1] text-white rounded-3xl transition-colors"
             >
               <span className="text-white">{nav.icon}</span>
               {(isExpanded || isHovered || isMobileOpen) && (
@@ -146,7 +146,7 @@ const AppSidebar: React.FC = () => {
                 </span>
               )}
               <span className="ml-auto">
-                <PlusIcon className="w-5 h-5 text-white" />
+                <PlusIcon className="w-5 h-5 mt-2" />
               </span>
             </button>
           ) : (
@@ -154,7 +154,7 @@ const AppSidebar: React.FC = () => {
             nav.path && (
               <Link
                 href={nav.path}
-                className={`flex items-center gap-3 px-4 py-2 ${
+                className={`flex items-center gap-3 px-4 py-2 w-[232px] h-[40px] pr-4 ${
                   isActive(nav.path)
                     ? "bg-gray-100 text-black rounded-2xl"
                     : "text-gray-700"
@@ -179,7 +179,7 @@ const AppSidebar: React.FC = () => {
 
   return (
     <aside
-      className={`fixed m-1 flex flex-col top-0 px-2 left-0 bg-white/85 text-gray-900 h-screen transition-all duration-300 ease-in-out z-50 border-r border-gray-200 rounded-3xl
+      className={`fixed m-1 flex flex-col top-0 px-2 left-0 bg-white/85 text-gray-900 h-[892px] transition-all duration-300 ease-in-out z-50 border-r border-gray-200 rounded-3xl
         ${
           isExpanded || isMobileOpen
             ? "w-[248px]"
@@ -206,7 +206,7 @@ const AppSidebar: React.FC = () => {
       </div>
 
       {/* Nav Menu */}
-      <div className="flex flex-col overflow-y-auto no-scrollbar pt-4">
+      <div className="flex flex-col overflow-y-auto no-scrollbar pt-4 ">
         <nav className="mb-6">
           <div className="flex flex-col gap-4">
             {renderMenuItems(navItems, "main")}
@@ -215,17 +215,18 @@ const AppSidebar: React.FC = () => {
       </div>
 
       {/* Calendar Block (Bottom) */}
-      <div className="mt-auto mb-4 px-2 flex flex-col gap-2">
-        <div className="bg-white rounded-xl p-2 shadow-sm flex items-center justify-center flex-col text-center w-full">
-          <div className="text-xs text-gray-400">Jul</div>
+      <div className="mt-auto mb-4 px-2 flex gap-2 w-[232px] h-[88px] bg-white rounded-xl shadow-sm">
+        <div className=" p-2  flex flex-col items-center justify-center  text-center ">
+          <div className="text-sm text-gray-800">Jul</div>
           <div className="text-lg font-semibold text-black">22</div>
         </div>
-        <div className="bg-[#525EB1] text-white rounded-xl p-2 text-center text-xs w-full">
-          USA / Brooklyn
-          <br />
-          14:00
-          <br />
-          PM
+        <div className="bg-[#525EB1] text-white rounded-xl mt-2 ml-4 p-2 text-xs w-[156px] h-[72px] flex flex-col gap-2 justify-start">
+          <p>
+            USA / Brooklyn
+            <br />
+            14:00
+          </p>
+          <p>PM</p>
         </div>
       </div>
     </aside>

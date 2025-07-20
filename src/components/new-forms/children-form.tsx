@@ -193,7 +193,7 @@ export function ChildrenForm({ data, onNext, onBack }: ChildrenFormProps) {
                 </div>
                 <div className="flex flex-col space-y-4 mt-2">
                   <div className="relative">
-                    <Label className="absolute left-3 top-3 text-xs text-gray-500">
+                    <Label className="absolute left-3 top-3 text-gray-600 ">
                       Date Of Birth
                     </Label>
                     <Input
@@ -206,7 +206,7 @@ export function ChildrenForm({ data, onNext, onBack }: ChildrenFormProps) {
                   </div>
 
                   <div className="relative">
-                    <Label className="absolute left-3 top-3 text-xs text-gray-500">
+                    <Label className="absolute left-3 top-3 text-gray-600">
                       Applicant Relation
                     </Label>
                     <Input

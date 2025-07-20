@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Search, ChevronDown } from "lucide-react";
+import GenericSearchField from "../atoms/generic-search-field/generic-search-field";
 
 const notifications = [
   { id: 1, title: "Website Update", type: "update", unread: false },
@@ -20,16 +21,18 @@ const notifications = [
 
 export function NotificationsList() {
   const [selectedNotification, setSelectedNotification] = useState(1);
+  const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <div className="h-full flex flex-col bg-white rounded-3xl shadow-md w-[256px]">
+    <div className="h-[889px] flex flex-col bg-white rounded-3xl shadow-md w-[320px]">
       {/* Header */}
       <div className="px-4 pt-4 pb-3 border-b border-gray-200">
         <div className="relative mb-3">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-          <Input
+          <GenericSearchField
+            value={searchQuery}
+            onChange={setSearchQuery}
             placeholder="Search"
-            className="pl-9 py-2 text-sm rounded-lg bg-gray-100 focus:bg-white"
+            aria-label="Search categories"
           />
         </div>
         <div className="flex items-center justify-between">
