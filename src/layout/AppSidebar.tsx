@@ -44,13 +44,8 @@ const navItems: NavItem[] = [
 ];
 
 const AppSidebar: React.FC = () => {
-  const {
-    isExpanded,
-    isMobileOpen,
-    isHovered,
-    setIsHovered,
-    setIsMobileOpen,
-  } = useSidebar();
+  const { isExpanded, isMobileOpen, isHovered, setIsHovered, setIsMobileOpen } =
+    useSidebar();
 
   const router = useRouter(); // Initialize the router
   const pathname = usePathname();
@@ -177,7 +172,8 @@ const AppSidebar: React.FC = () => {
 
   return (
     <aside
-      className={`fixed m-1 flex flex-col top-0 px-2 left-0 bg-white/85 text-gray-900 h-[892px] transition-all duration-300 ease-in-out z-50 border-r border-gray-200 rounded-3xl
+      className={`fixed m-1 flex flex-col top-0 px-2 left-0 bg-white/85 text-gray-900 min-h-[889px]
+ transition-all duration-300 ease-in-out z-50 border-r border-gray-200 rounded-3xl
         ${
           isExpanded || isMobileOpen
             ? "w-[248px]"
@@ -204,7 +200,7 @@ const AppSidebar: React.FC = () => {
       </div>
 
       {/* Nav Menu */}
-      <div className="flex flex-col overflow-y-auto no-scrollbar pt-4 ">
+      <div className="flex flex-col overflow-y-auto no-scrollbar pt-4 w-[232px]">
         <nav className="mb-6">
           <div className="flex flex-col gap-4">
             {renderMenuItems(navItems, "main")}

@@ -37,13 +37,19 @@ export default function NewForm() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-8 bg-white shadow-md rounded-3xl w-full">
-      <h1 className="text-3xl font-bold mb-8">Applicant Particulars</h1>
-      <ApplicantForm
-        data={applicationData}
-        onNext={handleNextStep}
-        onBack={handleBackStep}
-      />
+    <div className="w-[840px]  mx-auto p-2 space-y-2">
+      <div className="bg-white rounded-3xl shadow-md px-4 py-6 w-[840px] h-[572px]">
+        <div className="relative pt-3 pb-14 pr-4">
+          <h3 className="text-2xl font-semibold text-center absolute left-1/2 transform -translate-x-1/2">
+            Applicant Particulars
+          </h3>
+        </div>{" "}
+        <ApplicantForm
+          data={applicationData}
+          onNext={handleNextStep}
+          onBack={handleBackStep}
+        />
+      </div>
     </div>
   );
 }

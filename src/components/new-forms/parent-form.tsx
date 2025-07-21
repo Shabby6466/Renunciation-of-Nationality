@@ -12,6 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { ArrowRightIcon } from "@/icons";
 
 interface ParentFormProps {
   data: any;
@@ -46,63 +47,94 @@ export default function ParentForm({ data, onNext, onBack }: ParentFormProps) {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-2 w-full space-y-4">
+    <div className="w-[840px]  mx-auto p-2 space-y-2">
       {/* Parents Particulars */}
-      <div className="bg-white rounded-3xl shadow-md p-6 border">
-        <h3 className="text-lg font-semibold mb-4">Parents Particulars</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <Label htmlFor="fathersName">Fathers Name</Label>
+      <div className="bg-white rounded-3xl shadow-md px-4 py-6 w-[840px] h-[252px]">
+        <div className="relative pb-14 pr-4">
+          <h3 className="text-2xl font-semibold text-center absolute left-1/2 transform -translate-x-1/2">
+            Parent Particulars
+          </h3>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-1">
+          <div className="relative">
+            <Label
+              htmlFor="fathersName"
+              className="absolute left-3 top-3 text-xs text-gray-500"
+            >
+              Fathers Name
+            </Label>
             <Input
               id="fathersName"
               value={formData.fathersName}
               onChange={(e) => handleChange("fathersName", e.target.value)}
-              className="mt-1"
+              className="mt-1 pt-6"
             />
           </div>
 
-          <div>
-            <Label htmlFor="fathersNationality">Fathers Nationality</Label>
+          <div className="relative">
+            <Label
+              htmlFor="fathersNationality"
+              className="absolute left-3 top-3 text-xs text-gray-500"
+            >
+              Fathers Nationality
+            </Label>
             <Input
               id="fathersNationality"
               value={formData.fathersNationality}
               onChange={(e) =>
                 handleChange("fathersNationality", e.target.value)
               }
-              className="mt-1"
+              className="mt-1 pt-6"
             />
           </div>
 
-          <div>
-            <Label htmlFor="mothersName">Mothers Name</Label>
+          <div className="relative">
+            <Label
+              htmlFor="mothersName"
+              className="absolute left-3 top-3 text-xs text-gray-500"
+            >
+              Mothers Name
+            </Label>
             <Input
               id="mothersName"
               value={formData.mothersName}
               onChange={(e) => handleChange("mothersName", e.target.value)}
-              className="mt-1"
+              className="mt-1 pt-6"
             />
           </div>
 
-          <div>
-            <Label htmlFor="mothersNationality">Mothers Nationality</Label>
+          <div className="relative">
+            <Label
+              htmlFor="mothersNationality"
+              className="absolute left-3 top-3 text-xs text-gray-500"
+            >
+              Mothers Nationality
+            </Label>
             <Input
               id="mothersNationality"
               value={formData.mothersNationality}
               onChange={(e) =>
                 handleChange("mothersNationality", e.target.value)
               }
-              className="mt-1"
+              className="mt-1 pt-6"
             />
           </div>
         </div>
       </div>
 
       {/* Other Details */}
-      <div className="bg-white rounded-3xl shadow-md p-6 border">
-        <h3 className="text-lg font-semibold mb-4">Other Details</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <Label htmlFor="foreignCitizenshipRef">
+      <div className="bg-white rounded-3xl shadow-md px-4 py-6 w-[840px] h-[439px]">
+        <div className="relative pt-3 pb-14 pr-4">
+          <h3 className="text-2xl font-semibold text-center absolute left-1/2 transform -translate-x-1/2">
+            Other Details
+          </h3>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-1">
+          <div className="relative">
+            <Label
+              htmlFor="foreignCitizenshipRef"
+              className="absolute left-3 top-3 text-xs text-gray-500"
+            >
               Foreign Citizenship Assurance Ref. No.
             </Label>
             <Input
@@ -111,39 +143,54 @@ export default function ParentForm({ data, onNext, onBack }: ParentFormProps) {
               onChange={(e) =>
                 handleChange("foreignCitizenshipRef", e.target.value)
               }
-              className="mt-1"
+              className="mt-1 pt-6"
             />
           </div>
 
-          <div>
-            <Label htmlFor="assuranceLetterDate">Assurance Letter Date</Label>
+          <div className="relative">
+            <Label
+              htmlFor="assuranceLetterDate"
+              className="absolute left-3 top-3 text-xs text-gray-500"
+            >
+              Assurance Letter Date
+            </Label>
             <Input
               id="assuranceLetterDate"
               value={formData.assuranceLetterDate}
               onChange={(e) =>
                 handleChange("assuranceLetterDate", e.target.value)
               }
-              className="mt-1"
+              className="mt-1 pt-6"
             />
           </div>
 
-          <div>
-            <Label htmlFor="issuingAuthority">Issuing Authority</Label>
+          <div className="relative">
+            <Label
+              htmlFor="issuingAuthority"
+              className="absolute left-3 top-3 text-xs text-gray-500"
+            >
+              Issuing Authority
+            </Label>
             <Input
               id="issuingAuthority"
               value={formData.issuingAuthority}
               onChange={(e) => handleChange("issuingAuthority", e.target.value)}
-              className="mt-1"
+              className="mt-1 pt-6"
             />
           </div>
 
-          <div>
-            <Label htmlFor="issuingCountry">Issuing Country</Label>
+          <div className="relative">
+            <Label
+              htmlFor="issuingCountry"
+              className="absolute left-3 top-3 text-xs text-gray-500"
+            >
+              Issuing Country
+            </Label>
             <Select
               value={formData.issuingCountry}
               onValueChange={(value) => handleChange("issuingCountry", value)}
             >
-              <SelectTrigger className="mt-1">
+              <SelectTrigger className="mt-1 pt-8 pb-4 ">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent className="bg-white ">
@@ -155,8 +202,11 @@ export default function ParentForm({ data, onNext, onBack }: ParentFormProps) {
             </Select>
           </div>
 
-          <div>
-            <Label htmlFor="nearestForeignMission">
+          <div className="relative">
+            <Label
+              htmlFor="nearestForeignMission"
+              className="absolute left-3 top-3 text-xs text-gray-500"
+            >
               Nearest Foreign Mission
             </Label>
             <Input
@@ -165,41 +215,61 @@ export default function ParentForm({ data, onNext, onBack }: ParentFormProps) {
               onChange={(e) =>
                 handleChange("nearestForeignMission", e.target.value)
               }
-              className="mt-1"
+              className="mt-1 pt-6"
             />
           </div>
 
-          <div>
-            <Label htmlFor="foreignCountry">Foreign Country</Label>
+          <div className="relative">
+            <Label
+              htmlFor="foreignCountry"
+              className="absolute left-3 top-3 text-xs text-gray-500"
+            >
+              Foreign Country
+            </Label>
             <Input
               id="foreignCountry"
               value={formData.foreignCountry}
               onChange={(e) => handleChange("foreignCountry", e.target.value)}
-              className="mt-1"
+              className="mt-1 pt-6"
             />
           </div>
 
-          <div className="md:col-span-2">
-            <Label htmlFor="foreignAddress">Foreign Address</Label>
+          <div className="relative md:col-span-2">
+            <Label
+              htmlFor="foreignAddress"
+              className="absolute left-3 top-3 text-xs text-gray-500"
+            >
+              Foreign Address
+            </Label>
             <Input
               id="foreignAddress"
               value={formData.foreignAddress}
               onChange={(e) => handleChange("foreignAddress", e.target.value)}
-              className="mt-1"
+              className="mt-1 pt-6 w-[801px]"
             />
           </div>
         </div>
-        <div className="flex justify-between pt-6">
-          <Button type="button" className="border rounded-3xl" onClick={onBack}>
-            Cancel
-          </Button>
-          <Button
-            type="button"
-            className="bg-[#525EB1] hover:bg-indigo-700 text-white rounded-3xl"
-            onClick={() => onNext(formData)}
-          >
-            Next
-          </Button>
+        <div className="flex justify-between mt-8 ">
+          {/* <FormProgress /> */}
+          <div></div>
+          <div className="flex space-x-2">
+            <Button
+              type="button"
+              className="border rounded-3xl h-[32px] bg-gray-100"
+              onClick={onBack}
+            >
+              Go Back
+            </Button>
+
+            <Button
+              type="button"
+              className="bg-[#525EB1] hover:bg-[#414c99] text-white rounded-3xl h-[32px] flex items-center pr-2"
+              onClick={handleSubmit}
+            >
+              Next
+              <ArrowRightIcon className="mt-1" />
+            </Button>
+          </div>
         </div>
       </div>
     </div>

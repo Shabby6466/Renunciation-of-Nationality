@@ -31,7 +31,7 @@ body {
   --font-*: initial;
   --font-outfit: "Inter", sans-serif !important;
 
-  --breakpoint-*: initial;
+  /* --breakpoint-*: initial;
   --breakpoint-2xsm: 375px;
   --breakpoint-xsm: 425px;
   --breakpoint-3xl: 2000px;
@@ -39,7 +39,17 @@ body {
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
+  --breakpoint-2xl: 1536px; */
+
+  --breakpoint-*: initial;
+  --breakpoint-2xsm: 375px; /* Mobile portrait */
+  --breakpoint-xsm: 425px; /* Mobile large */
+  --breakpoint-sm: 600px; /* Small tablets / large phones */
+  --breakpoint-md: 768px; /* Tablets */
+  --breakpoint-lg: 1024px; /* Small laptops */
+  --breakpoint-xl: 1280px; /* Standard laptops */
+  --breakpoint-2xl: 1440px; /* Design resolution target */
+  --breakpoint-3xl: 1600px; /* High-res monitors */
 
   --text-title-2xl: 72px;
   --text-title-2xl--line-height: 90px;
@@ -788,7 +798,7 @@ label {
 }
 
 .bg {
-  background-image: url("/Images/bg/landing_page 2.png");
+  background-image: url("/Images/bg/gov-bg-logo.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

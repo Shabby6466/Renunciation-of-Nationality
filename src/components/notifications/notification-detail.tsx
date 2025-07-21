@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export function NotificationDetail() {
   return (
-    <div className="h-[889px] w-full flex flex-col bg-white rounded-3xl shadow-sm  mx-1">
-      <div className="p-6 border-b">
-        <h1 className="text-xl font-bold">Website Update</h1>
+    <div className="h-[889px] w-[840px] flex flex-col bg-white rounded-3xl shadow-sm ">
+      <div className="p-4 border-b">
+        <h1 className="text-md font-semi-bold">Website Update</h1>
       </div>
 
       <div className="flex-1 p-6 space-y-6">

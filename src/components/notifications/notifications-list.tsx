@@ -24,7 +24,7 @@ export function NotificationsList() {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <div className="h-[889px] flex flex-col bg-white rounded-3xl shadow-md w-[320px]">
+    <div className="w-[320px] h-[889px] flex flex-col bg-white rounded-3xl shadow-md ">
       {/* Header */}
       <div className="px-4 pt-4 pb-3 border-b border-gray-200">
         <div className="relative mb-3">

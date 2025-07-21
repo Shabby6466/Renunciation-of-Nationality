@@ -26,21 +26,18 @@ export default function AdminLayout({
     pathname?.startsWith(path),
   );
 
-  const mainContentMargin = isMobileOpen
-    ? "ml-0"
-    : isExpanded || isHovered
-      ? "ml-[256px]"
-      : "ml-[90px]";
+  const mainContentMargin =
+    isExpanded || isHovered ? "lg:ml-[256px]" : "lg:ml-[90px]";
 
   return (
-    <div className="bg-[#F5F7FE] min-h-screen w-full">
+    <div className="bg-[#F5F7FE] h[889px] w-full">
       {!hideSidebar && <AppSidebar />}
-      {!hideSidebar && <Backdrop />}
+      {/* {!hideSidebar && <Backdrop />} */}
 
       <main
-        className={`transition-all duration-300 ease-in-out ${
+        className={`transition-all duration-300 ease-in-out m-1  ${
           hideSidebar ? "ml-0" : mainContentMargin
-        } m-1`}
+        } `}
       >
         <div className="max-w-screen-2xl mx-auto space-y-6">{children}</div>
       </main>

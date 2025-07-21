@@ -3,13 +3,13 @@ import { NotificationDetail } from "@/components/notifications/notification-deta
 
 export default function NotificationsPage() {
   return (
-    <div className="min-h-screen flex gap-2">
-      <div className="w-1/4 border-r">
-        <NotificationsList />
-      </div>
-      <div className="flex-1">
-        <NotificationDetail />
-      </div>
+    <div className="h-[889px] flex gap-1">
+      {/* <div className="border-r"> */}
+      <NotificationsList />
+      {/* </div> */}
+      {/* <div className="flex-1"> */}
+      <NotificationDetail />
+      {/* </div> */}
     </div>
   );
 }
