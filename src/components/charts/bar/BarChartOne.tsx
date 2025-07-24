@@ -11,7 +11,7 @@ const ReactApexChart = dynamic(() => import("react-apexcharts"), {
 
 export default function BarChartOne() {
   const options: ApexOptions = {
-    colors: ["#465fff"],
+    colors: ["#525EB1"],
     chart: {
       fontFamily: "Outfit, sans-serif",
       type: "bar",
@@ -23,7 +23,7 @@ export default function BarChartOne() {
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: "39%",
+        columnWidth: "95%",
         borderRadius: 5,
         borderRadiusApplication: "end",
       },
@@ -97,7 +97,7 @@ export default function BarChartOne() {
   ];
   return (
     <div className="max-w-full overflow-x-auto custom-scrollbar">
-      <div id="chartOne" className="min-w-[1000px]">
+      <div id="chartOne" className="min-w-[450px]">
         <ReactApexChart
           options={options}
           series={series}

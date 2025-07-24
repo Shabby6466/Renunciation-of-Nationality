@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 export default function page() {
   return (
-    <div className="bg-white/85 rounded-3xl p-6 shadow-sm min-h-screen h-full flex flex-col ">
+    <div className="bg-white/85 rounded-3xl p-6 pl-2 shadow-sm min-h-screen h-full flex flex-col ">
       <PageBreadcrumb pageTitle="Recent Forms" />
       <RecentForms />
     </div>

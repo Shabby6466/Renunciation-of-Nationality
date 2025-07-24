@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function FormHeader() {
   return (
-    <div className=" m-4">
+    <div className=" m-4 mt-0">
       <div className="max-w-4xl mx-auto p-6">
         <div className="flex items-center justify-center">
           <Image

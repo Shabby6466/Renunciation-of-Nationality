@@ -16,6 +16,11 @@ import { Search, Filter, Download } from "lucide-react";
 import GenericSearchField from "../atoms/generic-search-field/generic-search-field";
 import { ExportIcon } from "@/icons";
 
+interface ApplicationsTableProps {
+  className?: string;
+  style?: React.CSSProperties;
+}
+
 const applications = [
   {
     name: "Leslie Alexander",
@@ -49,11 +54,17 @@ const applications = [
   },
 ];
 
-export function ApplicationsTable() {
+const ApplicationsTable: React.FC<ApplicationsTableProps> = ({
+  className = "",
+  style,
+}) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <div className="bg-white rounded-3xl p-6 shadow-sm h-164">
+    <div
+      className="bg-white rounded-3xl p-6 shadow-md ml-8 ${className}"
+      style={style}
+    >
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-4">
           <Button
@@ -150,4 +161,6 @@ export function ApplicationsTable() {
       </div>
     </div>
   );
-}
+};
+
+export default ApplicationsTable;

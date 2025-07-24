@@ -21,6 +21,7 @@ export default function AdminLayout({
     "/children-form",
     "/supporting-documents",
     "/review-form",
+    "/create-application",
   ];
   const hideSidebar = routesToHideSidebar.some((path) =>
     pathname?.startsWith(path),
@@ -30,14 +31,17 @@ export default function AdminLayout({
     isExpanded || isHovered ? "lg:ml-[256px]" : "lg:ml-[90px]";
 
   return (
-    <div className="bg-[#F5F7FE] h[889px] w-full">
+    <div
+      className={`w-full min-h-screen transition-all duration-700 ease-in-out ${
+        hideSidebar ? "bg" : "bg-[#F5F7FE]"
+      }`}
+    >
       {!hideSidebar && <AppSidebar />}
-      {/* {!hideSidebar && <Backdrop />} */}
 
       <main
-        className={`transition-all duration-300 ease-in-out m-1  ${
-          hideSidebar ? "ml-0" : mainContentMargin
-        } `}
+        className={`transition-all duration-700 ease-in-out ${
+          hideSidebar ? "ml-0" : `${mainContentMargin} m-1`
+        }`}
       >
         <div className="max-w-screen-2xl mx-auto space-y-6">{children}</div>
       </main>

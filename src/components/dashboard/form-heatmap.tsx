@@ -16,12 +16,12 @@ export function FormHeatmap() {
   };
 
   return (
-    <div className="bg-white rounded-3xl p-6 shadow-sm">
+    <div className="bg-white rounded-3xl p-6 shadow-md w-[580px] h-[404px] ml-7 flex flex-col justify-between">
       <h2 className="text-xl font-semibold mb-6">Form Heatstamp</h2>
 
       <DashboardStats />
 
-      <div className="space-y-1">
+      {/* <div className="space-y-1">
         {days.map((day) => (
           <div key={day} className="flex items-center gap-1">
             <div className="w-10 text-xs text-gray-600 font-medium">{day}</div>
@@ -35,7 +35,7 @@ export function FormHeatmap() {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

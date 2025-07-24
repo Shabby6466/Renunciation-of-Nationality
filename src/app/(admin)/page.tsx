@@ -1,19 +1,19 @@
 import { FormHeatmap } from "@/components/dashboard/form-heatmap";
 import { VerificationChart } from "@/components/dashboard/verification-chart";
-import { ApplicationsTable } from "@/components/dashboard/applications-table";
+import ApplicationsTable from "@/components/dashboard/applications-table";
 import PageBreadcrumb from "@/components/common/PageBreadCrumb";
 
 export default function DashboardPage() {
   return (
-    <main className="bg-white min-h-screen p-4 rounded-3xl">
+    <main className="bg-white/80 min-h-screen p-4 rounded-3xl">
       <div className="space-y-8">
         <PageBreadcrumb
           pageTitle="Dashboard"
           // categoryInfo={true}
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 ">
-          <div className="lg:col-span-1 ">
+        <div className="flex flex-cols gap-4 mb-6 ">
+          <div>
             <FormHeatmap />
           </div>
           <div>
@@ -21,7 +21,7 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        <ApplicationsTable />
+        <ApplicationsTable style={{ height: "378px", width: "1103px" }} />
       </div>
     </main>
   );

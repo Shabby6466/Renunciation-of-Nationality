@@ -64,7 +64,7 @@ const AppSidebar: React.FC = () => {
     // First, collapse the sidebar
     if (setIsMobileOpen) setIsMobileOpen(false);
     // Then, navigate to the page
-    router.push("/new-forms");
+    router.push("/create-application");
   };
 
   const handleSubmenuToggle = (

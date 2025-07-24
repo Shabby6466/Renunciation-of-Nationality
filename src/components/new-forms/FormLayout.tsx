@@ -6,7 +6,7 @@ export default function FormLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="bg">
+    <div className="flex flex-col items-center">
       <FormHeader />
       {children}
     </div>

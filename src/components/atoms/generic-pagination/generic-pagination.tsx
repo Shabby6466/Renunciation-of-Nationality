@@ -56,7 +56,7 @@ const GenericPagination: React.FC<GenericPaginationProps> = ({
   }, [currentPage, totalPages, maxVisiblePages]);
 
   return (
-    <div className="flex justify-center items-center space-x-2 mt-10">
+    <div className="flex justify-center items-center space-x-2 mt-4 bg-white rounded-3xl p-4 shadow-md w-[1164px] h-[40px] ">
       <button
         onClick={() => handleClick(currentPage - 1)}
         disabled={currentPage === 1}

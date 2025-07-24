@@ -260,7 +260,7 @@
 // export default React.memo(RecentForms);
 
 "use client";
-import { ApplicationsTable } from "../dashboard/applications-table";
+import ApplicationsTable from "../dashboard/applications-table";
 import GenericPagination from "../atoms/generic-pagination/generic-pagination";
 import React, { useState } from "react";
 
@@ -269,7 +269,9 @@ export default function RecentForms() {
   const totalPages = 10; // Replace with your actual total
   return (
     <div className="h-full flex flex-col justify-between">
-      <ApplicationsTable />
+      <ApplicationsTable
+        style={{ height: "766px", width: "1164px", marginLeft: "4px" }}
+      />
 
       <GenericPagination
         currentPage={currentPage}
