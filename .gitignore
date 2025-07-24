@@ -61,3 +61,4 @@ node_modules/@next/swc-*/next-swc.*.node
 # General dependencies
 node_modules/
 EOF
+.vercel

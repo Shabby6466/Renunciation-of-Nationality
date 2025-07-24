@@ -79,23 +79,24 @@ export function ChildrenForm({ data, onNext, onBack }: ChildrenFormProps) {
   };
 
   return (
-    <div className="w-[840px] h-[502px] mx-auto p-2 bg-white shadow-md rounded-2xl  flex flex-col ">
-      <div className="relative pt-6 pb-4 pr-4">
-        <h2 className="text-2xl font-semibold text-center absolute left-1/2 transform -translate-x-1/2">
-          Children Particulars
-        </h2>
-        <div className="flex justify-end pl-6">
-          <Button
-            onClick={addChild}
-            className="bg-[#525EB1] hover:bg-[#414c99]  text-white rounded-3xl"
-          >
-            Add
-            <Plus className="h-4 w-4 " />
-          </Button>
+    <>
+      <div className="w-[840px] min-h-[502px] mx-auto p-2 pb-12 bg-white shadow-md rounded-2xl  flex flex-col">
+        <div className="relative pt-6 pb-4 pr-4">
+          <h2 className="text-2xl font-semibold text-center absolute left-1/2 transform -translate-x-1/2">
+            Children Particulars
+          </h2>
+          <div className="flex justify-end pl-6">
+            <Button
+              onClick={addChild}
+              className="bg-[#525EB1] hover:bg-[#414c99]  text-white rounded-3xl"
+            >
+              Add
+              <Plus className="h-4 w-4 " />
+            </Button>
+          </div>
         </div>
-      </div>
 
-      {children.map((child: ChildData, index: number) => (
+        {children.map((child: ChildData, index: number) => (
         <div key={index} className=" px-2 py-2">
           <div className="flex items-start justify-between mb-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-2 w-full">
@@ -265,23 +266,27 @@ export function ChildrenForm({ data, onNext, onBack }: ChildrenFormProps) {
             </div>
           </div>
         </div>
-      ))}
-
-      <div className="w-[839px] h-[137px] bg-white border border-gray-200 rounded-2xl p-4 text-sm text-gray-700 mt-8">
-        <p className="mb-2">
-          <strong>Note:</strong> Please mention details of those minor children
-          (below 21 years), if they are residing abroad, as their pakistani
-          citizenship will also be ceased with applicant
-        </p>
-        <p>
-          Children below 21 years of age can Renounce Pakistan Citizenship
-          alongwith their father on prescribed form 'X' of a male person, who
-          are residing abroad and their Pakistani Citizenship, needs to be
-          cancelled. The names of children residing in Pakistan shall not be
-          mentioned in form X. Copies of CNIC/NICOP Form B/CRC along with
-          Cancelation slip of NADRA.
-        </p>
+        ))}
       </div>
-    </div>
+
+      {/* Separate Note Container with proper spacing */}
+      <div className="w-[840px] mx-auto mt-8 mb-10">
+        <div className="bg-white border border-gray-200 rounded-2xl p-4 text-sm text-gray-700">
+          <p className="mb-2">
+            <strong>Note:</strong> Please mention details of those minor children
+            (below 21 years), if they are residing abroad, as their pakistani
+            citizenship will also be ceased with applicant
+          </p>
+          <p>
+            Children below 21 years of age can Renounce Pakistan Citizenship
+            alongwith their father on prescribed form 'X' of a male person, who
+            are residing abroad and their Pakistani Citizenship, needs to be
+            cancelled. The names of children residing in Pakistan shall not be
+            mentioned in form X. Copies of CNIC/NICOP Form B/CRC along with
+            Cancelation slip of NADRA.
+          </p>
+        </div>
+      </div>
+    </>
   );
 }
