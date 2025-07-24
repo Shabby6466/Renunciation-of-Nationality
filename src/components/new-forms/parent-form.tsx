@@ -47,8 +47,7 @@ export default function ParentForm({ data, onNext, onBack }: ParentFormProps) {
   };
 
   return (
-    <div className="w-[840px]  mx-auto p-2 space-y-2">
-      {/* Parents Particulars */}
+    <div className="w-[840px] mx-auto p-2 pb-12 space-y-2 mb-10">{/* Parents Particulars */}
       <div className="bg-white rounded-3xl shadow-md px-4 py-6 w-[840px] h-[252px]">
         <div className="relative pb-14 pr-4">
           <h3 className="text-2xl font-semibold text-center absolute left-1/2 transform -translate-x-1/2">

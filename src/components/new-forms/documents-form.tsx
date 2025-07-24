@@ -73,7 +73,7 @@ export function DocumentsForm({ data, onNext, onBack }: DocumentsFormProps) {
   };
 
   return (
-    <div className="w-[840px] h-[1124px] mx-auto bg-white shadow-md rounded-2xl flex flex-col">
+    <div className="w-[840px] min-h-[502px] mb-10 mx-auto bg-white shadow-md rounded-2xl flex flex-col">
       <div className="border-b pb-8">
         <div className="relative pt-6 pb-4 pr-4 mb-12 mt-4">
           <h2 className="text-2xl font-semibold text-center absolute left-1/2 transform -translate-x-1/2">
@@ -119,7 +119,7 @@ export function DocumentsForm({ data, onNext, onBack }: DocumentsFormProps) {
         </div>
       </div>
 
-      <div className="flex justify-between mt-4 mx-4">
+      <div className="flex justify-between mt-4 mx-4 mb-10">
         <div></div>
         <div className="flex space-x-2">
           <Button
