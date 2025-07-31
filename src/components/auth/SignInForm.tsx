@@ -43,7 +43,7 @@ const SignInForm = () => {
 
   const onSubmit = useCallback(
     async (formData: FormData) => {
-      router.push("/");
+      // router.push("/");
       /////// !IMPORTANT UNCOMMENT
       // router.push("/enter-auth-code?origin=signin");
       // try {
@@ -57,6 +57,7 @@ const SignInForm = () => {
       //     apiError?.data?.message || "Login failed. Please try again.";
       //   toast.error(errorMessage);
       // }
+      // //////////////////////////////////
     },
     [login, router],
   );

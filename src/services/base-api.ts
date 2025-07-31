@@ -40,7 +40,7 @@ const baseQueryWithReauth = async (
     ////////////////////////////////////
     //   !IMPORTANT NOTE:
     // Uncomment the following line to dispatch a logout action
-    // window.location.href = "/signin";  // Redirect to the login page
+    // window.location.href = "/signin"; // Redirect to the login page
     ///////////////////////////////////////////
 
     // Option 2: Optionally, you might want to retry the request after refreshing the token
