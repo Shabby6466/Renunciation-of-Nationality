@@ -25,9 +25,9 @@ export default function FormProgress({
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
                     isCompleted
-                      ? "bg-indigo-600 text-white"
+                      ? "bg-[#525EB1] text-white"
                       : isCurrent
-                        ? "bg-indigo-600 text-white"
+                        ? "bg-[#525EB1] text-white"
                         : "bg-gray-200 text-gray-600"
                   }`}
                 >
@@ -37,7 +37,7 @@ export default function FormProgress({
               </div>
               {stepNumber < totalSteps && (
                 <div
-                  className={`w-8 h-0.5 mx-2 ${isCompleted ? "bg-indigo-600" : "bg-gray-200"}`}
+                  className={`w-8 h-0.5 mx-2 ${isCompleted ? "bg-[#525EB1]" : "bg-gray-200"}`}
                 />
               )}
             </div>

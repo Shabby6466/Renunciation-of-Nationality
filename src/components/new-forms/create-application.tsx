@@ -42,15 +42,29 @@ export default function CreateForm({ data, onNext, onBack }: CreateFormProps) {
     <div className="flex flex-col items-center">
       <form
         onSubmit={handleSubmit}
-        className="bg-white rounded-3xl shadow-md px-4 py-6 w-[840px] h-[297px] flex flex-col "
+        className="bg-white rounded-3xl shadow-md px-4 py-6 w-[840px] h-[227px] flex flex-col "
       >
         <div className="relative pt-3 pb-14 pr-4">
           <h3 className="text-2xl font-semibold text-center absolute left-1/2 transform -translate-x-1/2">
             Create Application
           </h3>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-1">
+        <div className="flex items-center justify-center gap-y-4 gap-x-1">
           <div className="relative">
+            <Label
+              htmlFor="cnic"
+              className="absolute left-3 top-3 text-xs text-gray-500"
+            >
+              CNIC
+            </Label>
+            <Input
+              id="fathersName"
+              value={formData.cnic}
+              onChange={(e) => handleChange("cnic", e.target.value)}
+              className="mt-1 pt-6"
+            />
+          </div>
+          {/* <div className="relative">
             <Label
               htmlFor="fullName"
               className="absolute left-3 top-3 text-xs text-gray-500"
@@ -80,24 +94,8 @@ export default function CreateForm({ data, onNext, onBack }: CreateFormProps) {
               }
               className="mt-1 pt-6"
             />
-          </div>
-
-          <div className="relative">
-            <Label
-              htmlFor="cnic"
-              className="absolute left-3 top-3 text-xs text-gray-500"
-            >
-              CNIC
-            </Label>
-            <Input
-              id="fathersName"
-              value={formData.cnic}
-              onChange={(e) => handleChange("cnic", e.target.value)}
-              className="mt-1 pt-6"
-            />
-          </div>
-
-          <div className="relative">
+          </div> */
+          /* <div className="relative">
             <Label
               htmlFor="remarks"
               className="absolute left-3 top-3 text-xs text-gray-500"
@@ -110,7 +108,7 @@ export default function CreateForm({ data, onNext, onBack }: CreateFormProps) {
               onChange={(e) => handleChange("remarks", e.target.value)}
               className="mt-1 pt-6"
             />
-          </div>
+          </div> */}
         </div>
         <div className="flex justify-between mt-8 ">
           {/* <FormProgress /> */}
